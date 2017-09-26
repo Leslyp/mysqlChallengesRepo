@@ -6,7 +6,7 @@ Generate the states using PHP/MySQL. */
 
 	try {
 		// connecting to mysql database, use hardcoded vars, use default to limit database access
-	  $conn = new PDO("mysql:host=localhost;dbname=Challenges;port=3306", "default", "eB0pBlUcnSZNpdNh");
+	  $conn = new PDO("mysql:dbname=lperez_Challenges;host=localhost", "r2hstudent", "SbFaGzNgGIE8kfP");
 	  
 
 	  // using prepare(protects from SQL injections) to build select statement so it can occur multiple times

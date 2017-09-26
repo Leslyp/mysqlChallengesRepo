@@ -6,7 +6,7 @@
 
 	try {
     // connecting to mysql database, use hardcoded vars, use default to limit database access
-    $conn = new PDO("mysql:host=localhost;dbname=Challenges;port=3306", "default", "eB0pBlUcnSZNpdNh");
+    $conn = new PDO("mysql:dbname=lperez_Challenges;host=localhost", "r2hstudent", "SbFaGzNgGIE8kfP");
 	
 	} catch(PDOException $e) {  // catches exceptions (unsuccessful)
 	   echo "Connection failed: " . $e->getMessage();
@@ -21,7 +21,7 @@
       $stmt->bindParam(':description',$description);
       $stmt->bindParam(':price',$price);
       $stmt->bindParam(':color',$color);
-      $stmt->execute();   
+      $stmt->execute();    	
     } catch (PDOException $e) {
       echo $e->getMessage();
     }

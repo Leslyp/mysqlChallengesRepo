@@ -9,7 +9,7 @@ Bonus if you can dynamically generate the color choices in the form from all of 
 	$userColor = $_GET['userColor'];
 	try {
 	    // connecting to mysql database, use hardcoded vars, use default to limit database access
-	    $conn = new PDO("mysql:host=localhost;dbname=Challenges;port=3306", "default", "eB0pBlUcnSZNpdNh");
+	    $conn = new PDO("mysql:dbname=lperez_Challenges;host=localhost", "r2hstudent", "SbFaGzNgGIE8kfP");
 	    // use distinct to eliminate repeated values
 	    $sth = $conn->prepare("SELECT DISTINCT Color FROM Products");
 	    $sth->execute();
