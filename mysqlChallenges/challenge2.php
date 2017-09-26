@@ -1,11 +1,9 @@
-<!-- Challenge 2: 
-Create a MySQL table that holds a list of products (name, description, price, color).
-Create a form that allows users to select a color. 
-When they submit the color choice, display all products that are that color. 
-Bonus if you can dynamically generate the color choices in the form from all of the unique color options in the database.  -->
-
-
 <?php
+// Challenge 2: 
+// Create a MySQL table that holds a list of products (name, description, price, color).
+// Create a form that allows users to select a color. 
+// When they submit the color choice, display all products that are that color. 
+// Bonus if you can dynamically generate the color choices in the form from all of the unique color options in the database.  
 	$userColor = $_GET['userColor'];
 	try {
 	    // connecting to mysql database, use hardcoded vars, use default to limit database access
