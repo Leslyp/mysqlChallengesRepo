@@ -17,12 +17,11 @@
       $sql = "INSERT INTO Products (Name, ProductId, Description, Price, Color) ";
       $sql .= "VALUES(:name, NULL, :description, :price, :color)";
       $stmt = $conn->prepare($sql);
-      $stmt->execute(array(
-                ':name'=>$_GET['name'],
-                ':description'=>$_GET['description'],
-                ':price'=>$_GET['price'],
-                ':color'=>$_GET['color'],
-      ));
+      $stmt->bindParam(':name',$name);
+      $stmt->bindParam(':description',$description);
+      $stmt->bindParam(':price',$price);
+      $stmt->bindParam(':color',$color);
+      $stmt->execute();   
     } catch (PDOException $e) {
       echo $e->getMessage();
     }
@@ -59,11 +58,11 @@
       <input type="text" name="color" id="color">
     </div> 
     
-
     <div class="submitBtn" style="margin-top: 2%">
       <button type='submit' name="submit" value="submit">Submit</button>
     </div>
   </form>
+
   <div>
   	<a href="challenge2.php">Back to Home Page</a> 
   </div> 
